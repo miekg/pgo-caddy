@@ -1,0 +1,7 @@
+{
+	email hostmaster@science.ru.nl
+	debug
+	log
+}
+
+import Caddyfile-import
