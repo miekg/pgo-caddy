@@ -1,7 +1,7 @@
 version: '3.6'
 services:
   caddy:
-    image: caddy:2.6-alpine
+    image: docker.io/caddy:2.6-alpine
     restart: unless-stopped
     ports:
       - "80:80"
