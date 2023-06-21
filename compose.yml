@@ -9,6 +9,6 @@ services:
     volumes:
       - ./caddy/:/etc/caddy/
     networks:
-      - default
+      - proxy
 networks:
-  default:
+  proxy:
