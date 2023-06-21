@@ -9,9 +9,8 @@ services:
     volumes:
       - ./caddy/:/etc/caddy/
     networks:
-      - podmannet
+      - caddynet
 
 networks:
-  podmannet:
-    external:
-      name: podman
+    caddynet:
+      name: caddy
