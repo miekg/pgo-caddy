@@ -8,3 +8,10 @@ services:
       - "443:443"
     volumes:
       - ./caddy/:/etc/caddy/
+    networks:
+      podmannet: {}
+
+networks:
+  podmannet:
+    external: true
+    name: podman
