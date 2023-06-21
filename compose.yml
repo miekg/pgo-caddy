@@ -9,7 +9,7 @@ services:
     volumes:
       - ./caddy/:/etc/caddy/
     networks:
-      podmannet: {}
+      - podmannet
 
 networks:
   podmannet:
