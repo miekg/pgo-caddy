@@ -9,8 +9,8 @@ services:
     volumes:
       - ./caddy/:/etc/caddy/
     networks:
-      - caddynet
+      - reverseproxy
 
 networks:
-    caddynet:
-      name: caddy
+    reverseproxy:
+      name: reverseproxy
