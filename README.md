@@ -29,13 +29,15 @@ reload = "localhost:caddy//exec caddy reload --config /etc/caddy/Caddyfile --ada
 name = "caddy1"
 user = "miek"
 repository = "https://github.com/miekg/pgo-website"
-branch = "main"
+env = [ "SHARE=/tmp", "INDEX=index1.html", "NETWORK=caddy1" ]
 urls = { "http://caddy1.miek.nl" = "caddy1-caddy-1:80" }
+networks = [ "reverseproxy" ]
 
 [[services]]
 name = "caddy2"
 user = "miek"
 repository = "https://github.com/miekg/pgo-website"
-branch = "alternate"
+env = [ "SHARE=/tmp", "INDEX=index2.html", "NETWORK=caddy2" ]
 urls = { "http://caddy2.miek.nl" = "caddy2-caddy-1:80" }
+networks = [ "reverseproxy" ]
 ~~~
